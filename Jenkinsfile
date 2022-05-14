@@ -1,5 +1,5 @@
 pipeline {
-    agent { label "Ola Unicamp"}
+    agent any
 
     stages {
         stage('build') {
