@@ -9,7 +9,7 @@ pipeline {
         }
         stage('run') {
             steps {
-                sh "docker run --rm java-app ."
+                sh "docker run --rm java-app"
             }
         }
     }
