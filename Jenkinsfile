@@ -2,14 +2,18 @@ pipeline {
     agent any
 
     stages {
-        stage('build') {
+        stage("build") {
             steps {
-                sh "docker build -t java-app ."
+                sh """
+                    docker build -t java-app .
+                """
             }
         }
-        stage('run') {
+        stage("run") {
             steps {
-                sh "docker run --rm java-app"
+                sh """
+                    docker run --rm java-app
+                """
             }
         }
     }
